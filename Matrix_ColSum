@@ -1,0 +1,18 @@
+matrix=[]
+rows=int(input("Enter the number of rows:"))
+cols=int(input("Enter the number of col:"))
+for i in range(rows):
+    row=[]
+    for j in range(cols):
+        value = int(input(f"Enter the value of element at position ({i}, {j}): "))
+        row.append(value)
+    matrix.append(row)
+for i in range(rows):
+    for j in range(cols):
+        print(matrix[i][j],end=' ')
+    print()
+for i in range(rows):
+    sum=0
+    for j in range(cols):
+       sum=sum+matrix[j][i]
+    print(f"Sum of column is {sum}")
